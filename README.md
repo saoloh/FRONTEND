@@ -1,1 +1,1 @@
-it is a repo for all the work the is fully managed by AI
+This repository contains frontend projects and learning materials.
