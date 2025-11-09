@@ -2,8 +2,6 @@
 
 This directory appears to be a personal knowledge base for learning and studying various subjects, primarily focused on software development and security. The root directory contains several subdirectories, each dedicated to a specific topic:
 
-*   **BUG-BOUNTY-HUNTING:** This section seems to be for learning about bug bounty hunting, with subdirectories for methodology, notes, resources, and personal reports.
-*   **graduation-project:** This is likely for a university graduation project.
 *   **JAVASCRIPT:** This section is dedicated to learning JavaScript, with subdirectories for exercises, notes, projects, and resources.
     *   **ELZERO TASKS:** A sub-directory within `EXERCISES` containing solutions to the Elzero Web School's JavaScript assignments.
 *   **REACT:** This section is for learning the React framework, with a similar structure to the JavaScript directory.
