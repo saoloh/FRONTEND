@@ -4,6 +4,7 @@ This directory appears to be a personal knowledge base for learning and studying
 
 *   **JAVASCRIPT:** This section is dedicated to learning JavaScript, with subdirectories for exercises, notes, projects, and resources.
     *   **ELZERO TASKS:** A sub-directory within `EXERCISES` containing solutions to the Elzero Web School's JavaScript assignments.
+    *   **META-Projects:** A sub-directory within `PROJECTS` for larger, more complex React projects.
 *   **REACT:** This section is for learning the React framework, with a similar structure to the JavaScript directory.
 
 # Key Files
@@ -16,4 +17,4 @@ This directory is intended for personal study and reference. The user can naviga
 
 # Repository Information
 
-**GitHub Repository:** https://github.com/saoloh/AI
+**GitHub Repository:** https://github.com/saoloh/FRONTEND.git
