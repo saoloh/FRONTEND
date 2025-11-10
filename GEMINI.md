@@ -10,6 +10,7 @@ This directory appears to be a personal knowledge base for learning and studying
 # Key Files
 
 The directory structure is the primary organizational tool. While no key files with content were identified, the `STUDY PLAN.md` files within each topic directory were likely intended to provide a roadmap for learning.
+*   `CONTRIBUTING.md`: Provides guidelines for contributing to open source projects.
 
 # Usage
 
