@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table {
+          width: 800px;
+          margin: 20px auto;
+          background-color: #fdfdfd;
+          text-align: center;
+        }
+        table td {
+          padding: 15px;
+          border: 1px solid #ccc;
+        }
+      </style>
+      <div class="result">
+        <table>
+          <tbody>
+            <tr>
+              <td>Repository Name</td>
+              <td>Stars</td>
+              <td>Visit Link</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+<script>
+const API_URL = "https://api.github.com/users/ElzeroWebSchool/repos?sort=stargazers_count&direction=desc&per_page=15";
+const tableBody = document.getElementById('repos-table-body');
+    const statusMessage = document.getElementById('status-message');
+    const resultContainer = document.getElementById('result-container');
+async function github(){
+    const respose = await fetch(API_URL);
+
+    const data = await respose.json();
+
+    data.forEach(repo => {
+                    // استخراج البيانات المطلوبة
+                    const repoName = repo.name;
+                    const starsCount = repo.stargazers_count;
+                    const repoUrl = repo.html_url;
+
+                    // إنشاء عنصر الصف (<tr>)
+                    const newRow = document.createElement('tr');
+
+                    // إنشاء خلايا البيانات (<td>)
+                    
+                    // خلية اسم المستودع
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = repoName;
+                    newRow.appendChild(nameCell);
+
+                    // خلية عدد النجوم
+                    const starsCell = document.createElement('td');
+                    newRow.appendChild(starsCell);
+
+                    // خلية رابط الزيارة
+                    const linkCell = document.createElement('td');
+                    const linkElement = document.createElement('a');
+                    linkElement.href = repoUrl;
+                    linkElement.textContent = 'زيارة';
+                    linkElement.target = '_blank'; // لفتح الرابط في صفحة جديدة
+                    linkElement.className = 'text-blue-600 hover:text-blue-800 font-medium'; // تنسيق بسيط للرابط
+                    linkCell.appendChild(linkElement);
+                    newRow.appendChild(linkCell);
+
+                    // إضافة الصف الجديد إلى جسم الجدول
+                    tableBody.appendChild(newRow);
+                });
+}
+document.addEventListener('DOMContentLoaded', github);
+</script>
+</html>

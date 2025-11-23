@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <div>Enter Your Text</div>
+        <textarea placeholder="Enter Text..."></textarea>
+        <button>Save To File</button>
+      </div>
+</body>
+    <script>
+        // قم بحفظ هذا الكود في ملف JavaScript وقم بربطه بملف HTML.
+
+function saveTextToFile() {
+  // 1. الحصول على المحتوى من الـ textarea
+  const textarea = document.querySelector('textarea');
+  const content = textarea.value;
+
+
+  // 2. إنشاء كائن Blob يحتوي على المحتوى
+  // 'text/plain' يحدد نوع الملف كنص عادي
+//   const blob = new Blob([content], { type: 'text/plain' });
+    let blob = new Blob([content], {type: 'text/plain'});
+ 
+    // 3. إنشاء عنوان URL للكائن Blob
+    const url = URL.createObjectURL(blob);
+    
+  // 4. إنشاء عنصر <a> مؤقت لمحاكاة التحميل
+  const a = document.createElement('a');
+  a.href = url;
+  
+  // 5. تعيين اسم الملف الذي سيتم حفظه
+  a.download = 'saved_content.txt'; 
+
+  // 6. محاكاة النقر لبدء عملية التحميل
+  document.body.appendChild(a); // يجب إضافة العنصر للـ DOM ليعمل النقر في بعض المتصفحات
+  a.click();
+
+  // 7. التنظيف: إزالة العنصر وإلغاء عنوان URL
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url); // يحرر ذاكرة الكائن Blob
+}
+
+// 8. ربط الدالة بزر "Save To File"
+const saveButton = document.querySelector('button');
+saveButton.addEventListener('click', saveTextToFile);
+    </script>
+</html>
