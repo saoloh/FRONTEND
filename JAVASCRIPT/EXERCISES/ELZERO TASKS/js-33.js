@@ -1,0 +1,1 @@
+console.log("%c Elzero Web School","background-color:blue;color:white;width:100px;height:20px;text-align:center;");
