@@ -24,7 +24,7 @@ const TodoList = () => {
     //           <tbody>
     //             {todos.map((todo,index) => (
     //               <tr key={todo.id}>
-    //                 <td>
+    //                  <td>
     //                   <input type="text" defaultValue={todo.text} />
     //                 </td>
     //                 <td>{todo.createdAt.toLocaleString()}</td>
